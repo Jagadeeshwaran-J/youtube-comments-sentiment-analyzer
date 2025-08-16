@@ -103,7 +103,7 @@ The script will:
 
 - The script only fetches **top-level comments** (not replies).  
 - Each comment is trimmed to **512 characters** before sentiment analysis.  
-- If you see `403 forbidden` errors, your API key is restricted. Check Google Cloud settings.  
+- If you see a 403 Forbidden error with a message like "Requests to this API youtube method... are blocked," your API key is likely restricted. To fix this, go to your Google Cloud Console, navigate to APIs & Services > Credentials, select your API key, and ensure that API restrictions are set to YouTube Data API v3 and that there are no application restrictions that would prevent your script from running.
 - The Hugging Face model used is [tabularisai/multilingual-sentiment-analysis](https://huggingface.co/tabularisai/multilingual-sentiment-analysis).
 
 ---
