@@ -35,14 +35,14 @@ pip install -r requirements.txt
 
 ### 1. Clone or download this project
 ```bash
-git clone https://github.com/yourusername/youtube-comments-sentiment.git
-cd youtube-comments-sentiment
+git clone https://github.com/Jagadeeshwaran-J/youtube-comments-sentiment-analyzer.git
+cd youtube-comments-sentiment-analyzer
 ```
 
 ### 2. Create a virtual environment (optional but recommended)
 ```bash
 python -m venv .venv
-.\.venv\Scriptsctivate   # On Windows
+.\.venv\Scripts\activate   # On Windows
 source .venv/bin/activate # On Mac/Linux
 ```
 
@@ -101,7 +101,8 @@ The script will:
 
 ## ⚠️ Notes
 
-- The script only fetches **top-level comments** (not replies).  
+- The script only fetches **top-level comments** (not replies).
+- The sentiment analysis model will be automatically downloaded to the ./Models/tabularisai folder the first time you run the script.
 - Each comment is trimmed to **512 characters** before sentiment analysis.  
 - If you see a 403 Forbidden error with a message like "Requests to this API youtube method... are blocked," your API key is likely restricted. To fix this, go to your Google Cloud Console, navigate to APIs & Services > Credentials, select your API key, and ensure that API restrictions are set to YouTube Data API v3 and that there are no application restrictions that would prevent your script from running.
 - The Hugging Face model used is [tabularisai/multilingual-sentiment-analysis](https://huggingface.co/tabularisai/multilingual-sentiment-analysis).
